@@ -6,11 +6,15 @@ import { useState } from 'react'
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData)
 
+  const deleteFeedback = (id) => {
+    setFeedback(feedback.filter((item) => item.id !== id))
+  }
+
   return (
     <>
       <Header />
       <div className='container'>
-        <FeedbackList feedback = {feedback}/>
+        <FeedbackList handleDelete={deleteFeedback} feedback={feedback} />
       </div>
     </>
   )
