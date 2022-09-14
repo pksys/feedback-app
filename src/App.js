@@ -1,4 +1,5 @@
 import Header from './components/Header.jsx'
+import AboutIconLink from "./components/AboutIconLink";
 import FeedbackStats from './components/FeedbackStats'
 import AboutPage from './pages/AboutPage'
 import FeedbackData from './data/FeedbackData'
@@ -36,6 +37,7 @@ function App() {
                   handleDelete={deleteFeedback}
                   feedback={feedback}
                 />
+                <AboutIconLink />
               </>
             }
           ></Route>
